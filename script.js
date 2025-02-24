@@ -59,3 +59,34 @@ document
       secretMessage.style.visibility = "hidden";
     })
   });
+
+  // practice-6 (todo- list)
+
+  // using for loop:
+  // const lists = document.getElementsByClassName("task");
+  // for(const list of lists){
+  //   list.addEventListener('click',
+  //     function(event){
+  //       event.target.parentNode.removeChild(event.target)
+  //     }
+  //   )
+  // }
+
+  document.getElementById("task-container").addEventListener('click',
+    function(event){
+      event.target.parentNode.removeChild(event.target);
+    }
+  )
+  
+  document.getElementById("add-btn").addEventListener('click',
+    function(){
+      const taskContainer = document.getElementById("task-container");
+      const newLi = document.createElement("li");
+      newLi.innerText = `task-${taskContainer.children.length+1}` 
+      
+      newLi.classList.add("task");
+
+      taskContainer.appendChild(newLi)
+    }
+  )
+ 

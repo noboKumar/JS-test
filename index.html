@@ -6,6 +6,9 @@
     <title>Dom-Events</title>
   </head>
   <style>
+    body{
+      background-color: rgba(250, 235, 215, 0.541);
+    }
     .first-section {
       text-align: center;
     }
@@ -23,6 +26,12 @@
       border-radius: 8px;
       background-color: aliceblue;
       padding: 20px;
+    }
+    .to-do-list-section{
+      font-size: 20px;
+    }
+    #task-container{
+      cursor: pointer;
     }
   </style>
   <body>
@@ -82,6 +91,22 @@
       <input id="confirm-input" type="text" placeholder="Type 'CONFIRM' Here" />
       <button id="delete-btn" disabled>Delete</button>
     </section>
+    <br>
+    <br>
+
+    <!-- practice-6(add and remove list) -->
+     <section class="to-do-list-section">
+      <h1>To-do-list</h1>
+      <p>Your Tasks:</p>
+      <ol id="task-container">
+        <li class="task">task-1</li>
+        <li class="task">task-2</li>
+        <li class="task">task-3</li>
+        <li class="task">task-4</li>
+        <li class="task">task-5</li>
+      </ol>
+      <button id="add-btn">Add New Task</button>
+     </section>
     <script src="script.js"></script>
   </body>
 </html>
