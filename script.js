@@ -39,5 +39,23 @@ document.getElementById("comment-btn").addEventListener("click", function () {
   commentContainer.appendChild(commentelement);
 
   // empty comment box input field
-  commentBox.value = ""
+  commentBox.value = "";
 });
+
+// practice-5 (delete secret message)
+document
+  .getElementById("confirm-input")
+  .addEventListener("keyup", function (event) {
+    const inputConfirmText = event.target.value;
+    const deleteBtn = document.getElementById("delete-btn");
+    const secretMessage = document.getElementById("secret-message");
+
+    if (inputConfirmText === "CONFIRM") {
+      deleteBtn.removeAttribute("disabled");
+    } else {
+      deleteBtn.setAttribute("disabled", true);
+    }
+    deleteBtn.addEventListener('click', function(){
+      secretMessage.style.visibility = "hidden";
+    })
+  });
