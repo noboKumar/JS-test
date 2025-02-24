@@ -6,27 +6,66 @@
     <title>Dom-Events</title>
   </head>
   <style>
-    body{
-        text-align: center;
+    .first-section {
+      text-align: center;
+    }
+    .comment {
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      border: 2px solid black;
+      border-radius: 8px;
+      background-color: aliceblue;
+      padding: 20px;
     }
   </style>
   <body>
-    <!-- events: practice-1-->
-    <h1 id="title">This Is a JS Event Handler</h1>
-    <button id="btn">Click Me! to change Text</button>
-    <br>
-    <br>
+    <section class="first-section">
+      <!-- events: practice-1-->
+      <h1 id="title">This Is a JS Event Handler</h1>
+      <button id="btn">Click Me! to change Text</button>
+      <br />
+      <br />
 
-    <!-- Practice-2 -->
-    <button onclick="redColor()">Click Me for Red color</button>
-    <br>
-    <br>
+      <!-- Practice-2 -->
+      <button onclick="redColor()">Click Me for Red color</button>
+      <br />
+      <br />
 
-    <!-- practice-3 -->
-    <h1 id="name-field">Your Name Here</h1>
-    <input id="input-name" type="text">
-    <button id="update-btn">Update</button>
+      <!-- practice-3 -->
+      <h1 id="name-field">Your Name Here</h1>
+      <input id="input-name" type="text" />
+      <button id="update-btn">Update</button>
+      <br />
+      <br />
+    </section>
 
+    <!-- practice-4 -->
+    <h2>Comment Here</h2>
+    <h4>All Comments:</h4>
+    <div id="comment-container">
+      <p class="comment">Great work! Keep it up. Your effort really shows!</p>
+      <p class="comment">
+        This is an interesting perspective. Could you elaborate more?
+      </p>
+      <p class="comment">
+        I appreciate your insight! Have you considered adding more examples?
+      </p>
+      <p class="comment">
+        Nice job! A little more detail would make it even better.
+      </p>
+    </div>
+    <div class="comment-input-box">
+      <textarea
+        id="comment-input-text"
+        name=""
+        id=""
+        cols="50"
+        rows="5"
+      ></textarea>
+      <br />
+      <button id="comment-btn">comment</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
