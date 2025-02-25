@@ -55,38 +55,51 @@ document
     } else {
       deleteBtn.setAttribute("disabled", true);
     }
-    deleteBtn.addEventListener('click', function(){
+    deleteBtn.addEventListener("click", function () {
       secretMessage.style.visibility = "hidden";
-    })
+    });
   });
 
-  // practice-6 (todo- list)
+// practice-6 (todo- list)
 
-  // using for loop:
-  // const lists = document.getElementsByClassName("task");
-  // for(const list of lists){
-  //   list.addEventListener('click',
-  //     function(event){
-  //       event.target.parentNode.removeChild(event.target)
-  //     }
-  //   )
-  // }
+// using for loop:
+// const lists = document.getElementsByClassName("task");
+// for(const list of lists){
+//   list.addEventListener('click',
+//     function(event){
+//       event.target.parentNode.removeChild(event.target)
+//     }
+//   )
+// }
 
-  document.getElementById("task-container").addEventListener('click',
-    function(event){
-      event.target.parentNode.removeChild(event.target);
-    }
-  )
-  
-  document.getElementById("add-btn").addEventListener('click',
-    function(){
-      const taskContainer = document.getElementById("task-container");
-      const newLi = document.createElement("li");
-      newLi.innerText = `task-${taskContainer.children.length+1}` 
-      
-      newLi.classList.add("task");
+document
+  .getElementById("task-container")
+  .addEventListener("click", function (event) {
+    event.target.parentNode.removeChild(event.target);
+  });
 
-      taskContainer.appendChild(newLi)
-    }
-  )
- 
+document.getElementById("add-btn").addEventListener("click", function () {
+  const taskContainer = document.getElementById("task-container");
+  const newLi = document.createElement("li");
+  newLi.innerText = `task-${taskContainer.children.length + 1}`;
+
+  newLi.classList.add("task");
+
+  taskContainer.appendChild(newLi);
+});
+
+// practice-7(toggle-btn):
+// default text
+document.getElementById("light-text").style.display = "none";
+
+// dark mode toggle
+document.getElementById("dark-btn").addEventListener("click", function () {
+  document.getElementById("dark-text").style.display = "block";
+  document.getElementById("light-text").style.display = "none";
+});
+
+// light mode toggle
+document.getElementById("light-btn").addEventListener("click", function () {
+  document.getElementById("dark-text").style.display = "none";
+  document.getElementById("light-text").style.display = "block";
+});
